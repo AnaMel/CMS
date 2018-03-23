@@ -8,9 +8,13 @@ class TextEditor extends React.Component {
         }
     }
 
+    handleChange(e) {
+        e.preventDefault();
+
+    }
     render() {
         return(
-            <input type="text" placeholder="Sone Text"/>
+            <input type="text" placeholder="Some Text"/>
         )
     }
 }
