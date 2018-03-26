@@ -6,7 +6,8 @@ class Hero extends React.Component {
     constructor() {
         super();
         this.state ={
-            lang: 'en'
+            lang: 'en',
+            txtFrmt: 'hero'
         }
     }
 
@@ -15,7 +16,9 @@ class Hero extends React.Component {
             <div>
                 <LanguagePreference />
                 <section>
-                    <TextEditor />
+                    <TextEditor lang={this.state.lang} txtFrmt={this.state.txtFrmt} />
+                    <input type="file" />
+
                 </section>
             </div>
         )
