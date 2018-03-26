@@ -5,6 +5,7 @@ import {
   Route, Link, Redirect} from 'react-router-dom';
 import Hero from './hero';
 import Article from './article';
+import Preview from './preview';
 
 
 // Initialize Firebase
@@ -33,8 +34,10 @@ class App extends React.Component {
           <nav>
             <Link to="/hero">Hero</Link>
             <Link to="/article">Article</Link>
+            <Link to="/preview">Preview</Link>
             <Route path="/hero" component={Hero} />
             <Route path="/article" component={Article} />
+            <Route path="/preview" component={Preview} />
           </nav>
           :null}
         </Router>
