@@ -5,7 +5,7 @@ class TextEditor extends React.Component {
         super();
         this.state ={
             editMode: false,
-            txtValue: 'placeholder',
+            // txtValue: 'placeholder',
             updatedTxt: ''
         }
         this.toggleEditMode = this.toggleEditMode.bind(this);
@@ -40,7 +40,7 @@ class TextEditor extends React.Component {
         return(
             this.state.editMode?
             <div>
-                <input type="text" defaultValue={this.state.txtValue} onChange={(event) => this.handleChange(event, "updatedTxt")} />
+                <input type="text" defaultValue={this.props.defaultValue} onChange={(event) => this.handleChange(event, "updatedTxt")} />
                 <button onClick={(event) => this.updateData(event)}>Save Changes</button>
                 <button onClick = {(event) => this.toggleEditMode(event)}>Discard Changes</button>
             </div>
